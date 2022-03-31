@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
   selector: 'app-mock',
@@ -6,7 +6,8 @@ import {Component} from '@angular/core';
     <div *ngFor="let size of mock"
          style="margin-top: 20px; background: aliceblue; border-radius: 20px; width: 966px;"
          [style.height.rem]="size"></div>
-  `
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MockComponent {
 
